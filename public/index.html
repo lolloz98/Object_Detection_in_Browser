@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Broadcaster</title>
+
+	<meta name="description" content="Object Detection.">
+	<!--<link href="/main.css" rel="stylesheet">-->
+
+	<!-- Load TensorFlow.js. This is required to use coco-ssd model. -->
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+	<!-- Load the coco-ssd model. -->
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"> </script>
+
+	<script defer src="personDetection.js"></script>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+</head>
+
+<body>
+	<video id="video" playsinline autoplay muted></video>
+	<textarea id="objectDetected" rows="10" cols="40"></textarea>
+</body>
+</html>
